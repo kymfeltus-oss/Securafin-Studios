@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Securafin-AI • Live Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/logo.svg" />
+  <link rel="stylesheet" href="styles.css"/>
+  <script defer src="dashboard.js"></script>
+</head>
+<body class="dash-body">
+  <div class="noise"></div>
+  <header class="dash-nav">
+    <a href="index.html" class="brand dash-brand">
+      <img src="assets/logo.svg" class="brand-logo" alt="logo"/>
+      <span class="brand-name">Securafin<span class="accent">‑AI</span></span>
+    </a>
+    <nav class="dash-actions">
+      <a class="btn ghost small" href="index.html">Back to Site</a>
+      <button class="btn secondary small" id="themeToggle">Toggle Theme</button>
+      <button class="btn primary small" id="simulateBtn">Simulate Data</button>
+    </nav>
+  </header>
+
+  <main class="dash-main">
+    <section class="kpis">
+      <div class="kpi">
+        <div class="kpi-label">MRR</div>
+        <div class="kpi-value" data-kpi="mrr">$42,800</div>
+        <div class="kpi-sub">+8.2% MoM</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Churn</div>
+        <div class="kpi-value" data-kpi="churn">2.1%</div>
+        <div class="kpi-sub">−0.3% WoW</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">ARPU</div>
+        <div class="kpi-value" data-kpi="arpu">$189</div>
+        <div class="kpi-sub">+3.1% QoQ</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">NPS</div>
+        <div class="kpi-value" data-kpi="nps">72</div>
+        <div class="kpi-sub">World‑class</div>
+      </div>
+    </section>
+
+    <section class="panels">
+      <div class="panel">
+        <h3 class="panel-title">Revenue Trend</h3>
+        <svg id="revChart" class="chart" viewBox="0 0 600 200" role="img" aria-label="Revenue line chart"></svg>
+      </div>
+      <div class="panel">
+        <h3 class="panel-title">Customer Segments</h3>
+        <div class="seg-list">
+          <div class="seg-item"><span class="seg-dot"></span> Enterprise • 48%</div>
+          <div class="seg-item"><span class="seg-dot"></span> Mid‑Market • 34%</div>
+          <div class="seg-item"><span class="seg-dot"></span> SMB • 18%</div>
+        </div>
+      </div>
+      <div class="panel">
+        <h3 class="panel-title">Recent Activity</h3>
+        <ul class="activity">
+          <li>🟢 Payment received • $1,290 • <span class="dim">2m ago</span></li>
+          <li>🟡 New trial started • Growth Plan • <span class="dim">12m ago</span></li>
+          <li>🔵 Plan upgraded • Pro → Enterprise • <span class="dim">48m ago</span></li>
+          <li>🟣 Invoice sent • #INV‑3478 • <span class="dim">1h ago</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Securafin‑AI Demo — Dashboard.</p>
+  </footer>
+</body>
+</html>
