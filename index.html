@@ -4,23 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Securafin Studios — Design. Code. Influence.</title>
-  <meta name="description" content="Securafin Studios — Luxury tech development and app design for visionary brands."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/logo.png" />
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
   <script defer src="app.js"></script>
+
   <style>
+    /* glowing pulse for hero logo */
     @keyframes pulseGlow {
-      0% { transform: scale(1); opacity: 1; filter: drop-shadow(0 0 20px #00e5ff90); }
-      50% { transform: scale(1.08); opacity: 0.95; filter: drop-shadow(0 0 50px #00e5ffcc); }
-      100% { transform: scale(1); opacity: 1; filter: drop-shadow(0 0 20px #00e5ff90); }
+      0% {transform: scale(1);opacity:1;filter:drop-shadow(0 0 20px #00e5ff90);}
+      50%{transform: scale(1.08);opacity:.95;filter:drop-shadow(0 0 50px #00e5ffcc);}
+      100%{transform: scale(1);opacity:1;filter:drop-shadow(0 0 20px #00e5ff90);}
     }
   </style>
 </head>
+
 <body>
   <div class="noise"></div>
+
+  <!-- NAV -->
   <header class="nav">
     <a class="brand" href="#">
       <img src="/assets/logo.png" alt="Securafin Studios logo" class="brand-logo"/>
@@ -34,26 +37,22 @@
     </nav>
   </header>
 
-  <section class="hero" style="text-align:center; position:relative; overflow:hidden; padding-top:100px; padding-bottom:80px;">
+  <!-- HERO -->
+  <section class="hero">
     <div class="glow glow-1"></div>
     <div class="glow glow-2"></div>
-    <div class="hero-inner" style="display:flex; flex-direction:column; align-items:center; justify-content:center;">
-      <img src="/assets/logo.png" alt="Securafin emblem" class="hero-logo" 
-           style="width:540px; max-width:90%; margin-bottom:40px; filter:drop-shadow(0 0 35px #00e5ffcc) brightness(1.3); animation:pulseGlow 5s infinite ease-in-out;">
-      <h1 class="headline" style="font-size:clamp(36px, 5vw, 64px); line-height:1.1; margin:0; text-align:center;">
-        Luxury <span class="accent">Tech Experiences</span><br/> Engineered to Influence.
-      </h1>
-      <p class="subhead" style="max-width:700px; margin:20px auto 30px; font-size:18px; color:#c5d2e3;">
-        Securafin Studios builds immersive, intelligent, and visually striking applications 
-        that help brands stand apart in fintech, legal, and creative industries.
-      </p>
-      <div class="cta-row" style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center;">
+    <div class="hero-inner">
+      <img src="/assets/logo.png" alt="Securafin emblem" class="hero-logo" />
+      <h1 class="headline">Luxury <span class="accent">Tech Experiences</span><br/> Engineered to Influence.</h1>
+      <p class="subhead">Securafin Studios builds immersive, intelligent, and visually striking applications that help brands stand apart in fintech, legal, and creative industries.</p>
+      <div class="cta-row">
         <a class="btn primary" href="dashboard.html">See Live Demo</a>
         <a class="btn secondary" href="#contact">Hire the Studio</a>
       </div>
     </div>
   </section>
 
+  <!-- EXPERTISE -->
   <section id="features" class="section">
     <h2 class="section-title">Our Expertise</h2>
     <div class="grid features-grid">
@@ -64,35 +63,104 @@
     </div>
   </section>
 
+  <!-- INDUSTRIES -->
   <section id="industries" class="section">
     <h2 class="section-title">Industries We Serve</h2>
     <p class="lead">Custom apps tailored for every vision — business, ministry, creative, and beyond.</p>
 
     <div class="grid cols-4">
-      <article class="card"><span class="badge">Business</span><div class="device" style="--bgimg: url('assets/industries/fintech.png');"></div><div class="content"><div class="title">Securafin AI</div><p class="desc">Financial automation dashboard & client portal.</p><div class="button-row"><a class="btn primary small" href="#">View Demo</a><a class="btn ghost small" href="#">Case Study</a></div></div></article>
+      <!-- 1 BUSINESS / FINTECH -->
+      <article class="card">
+        <span class="badge">Business</span>
+        <div class="device" style="--bgimg:url('assets/industries/fintech.png');"></div>
+        <div class="content">
+          <div class="title">Securafin AI</div>
+          <p class="desc">Financial automation dashboard & client portal.</p>
+        </div>
+      </article>
 
-      <article class="card"><span class="badge">Legal</span><div class="device" style="--bgimg: url('assets/industries/legal.png');"></div><div class="content"><div class="title">The Legal Suite</div><p class="desc">Case vault, e-sign docs & subscription legal access.</p><div class="button-row"><a class="btn primary small" href="#">View Demo</a><a class="btn ghost small" href="#">Case Study</a></div></div></article>
+      <!-- 2 LEGAL -->
+      <article class="card">
+        <span class="badge">Legal</span>
+        <div class="device" style="--bgimg:url('assets/industries/legal.png'); background-position:left center;"></div>
+        <div class="content">
+          <div class="title">The Legal Suite</div>
+          <p class="desc">Case vault, e-sign docs & subscription legal access.</p>
+        </div>
+      </article>
 
-      <article class="card"><span class="badge">Ministry</span><div class="device" style="--bgimg: url('assets/industries/ministry.png');"></div><div class="content"><div class="title">FaithConnect</div><p class="desc">Donations, volunteer scheduling & sermon archive.</p><div class="button-row"><a class="btn primary small" href="#">View Demo</a><a class="btn ghost small" href="#">Case Study</a></div></div></article>
+      <!-- 3 MINISTRY -->
+      <article class="card">
+        <span class="badge">Ministry</span>
+        <div class="device" style="--bgimg:url('assets/industries/ministry.png');"></div>
+        <div class="content">
+          <div class="title">FaithConnect</div>
+          <p class="desc">Donations, volunteer scheduling & sermon archive.</p>
+        </div>
+      </article>
 
-      <article class="card"><span class="badge">Creators</span><div class="device" style="--bgimg: url('assets/industries/creators.png');"></div><div class="content"><div class="title">Influence Hub</div><p class="desc">Courses, community & brand monetization.</p><div class="button-row"><a class="btn primary small" href="#">View Demo</a><a class="btn ghost small" href="#">Case Study</a></div></div></article>
+      <!-- 4 CREATORS -->
+      <article class="card">
+        <span class="badge">Creators</span>
+        <div class="device" style="--bgimg:url('assets/industries/creators.png');"></div>
+        <div class="content">
+          <div class="title">Influence Hub</div>
+          <p class="desc">Courses, community & brand monetization.</p>
+        </div>
+      </article>
 
-      <article class="card"><span class="badge">Coaches</span><div class="device" style="--bgimg: url('assets/industries/coaches.png');"></div><div class="content"><div class="title">Vision Lab</div><p class="desc">Mentorship programs with booking & tracking.</p><div class="button-row"><a class="btn primary small" href="#">View Demo</a><a class="btn ghost small" href="#">Case Study</a></div></div></article>
+      <!-- 5 COACHES / VISION LAB -->
+      <article class="card">
+        <span class="badge">Coaches</span>
+        <div class="device" style="--bgimg:url('assets/industries/coaches.png'); background-color:#0b0f14; background-blend-mode:normal;"></div>
+        <div class="content">
+          <div class="title">Vision Lab</div>
+          <p class="desc">Mentorship programs with booking & tracking.</p>
+        </div>
+      </article>
 
-      <article class="card"><span class="badge">Fintech</span><div class="device" style="--bgimg: url('assets/industries/credit.png');"></div><div class="content"><div class="title">Securafin Core</div><p class="desc">Credit builder & automated finance operations.</p><div class="button-row"><a class="btn primary small" href="#">View Demo</a><a class="btn ghost small" href="#">Case Study</a></div></div></article>
+      <!-- 6 CREDIT BUILDER -->
+      <article class="card">
+        <span class="badge">Fintech</span>
+        <div class="device" style="--bgimg:url('assets/industries/credit.png');"></div>
+        <div class="content">
+          <div class="title">Securafin Core</div>
+          <p class="desc">Credit builder & automated finance operations.</p>
+        </div>
+      </article>
 
-      <article class="card"><span class="badge">Education</span><div class="device" style="--bgimg: url('assets/industries/education.png');"></div><div class="content"><div class="title">LearnOS</div><p class="desc">Courses, attendance & parent portals.</p><div class="button-row"><a class="btn primary small" href="#">View Demo</a><a class="btn ghost small" href="#">Case Study</a></div></div></article>
+      <!-- 7 EDUCATION -->
+      <article class="card">
+        <span class="badge">Education</span>
+        <div class="device" style="--bgimg:url('assets/industries/education.png');"></div>
+        <div class="content">
+          <div class="title">LearnOS</div>
+          <p class="desc">Courses, attendance & parent portals.</p>
+        </div>
+      </article>
 
-      <article class="card"><span class="badge">Wellness</span><div class="device" style="--bgimg: url('assets/industries/wellness.png');"></div><div class="content"><div class="title">Thrive</div><p class="desc">Coaching, nutrition & habit streaks.</p><div class="button-row"><a class="btn primary small" href="#">View Demo</a><a class="btn ghost small" href="#">Case Study</a></div></div></article>
+      <!-- 8 WELLNESS -->
+      <article class="card">
+        <span class="badge">Wellness</span>
+        <div class="device" style="--bgimg:url('assets/industries/wellness.png');"></div>
+        <div class="content">
+          <div class="title">Thrive</div>
+          <p class="desc">Coaching, nutrition & habit streaks.</p>
+        </div>
+      </article>
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact" class="section contact">
     <div class="contact-card">
       <h2>Let’s Build Something Brilliant</h2>
       <p>Have a vision? Let's turn it into a digital experience that defines excellence.</p>
       <form id="contactForm" class="contact-form">
-        <div class="row"><input type="text" name="name" placeholder="Your name" required/><input type="email" name="email" placeholder="Email" required/></div>
+        <div class="row">
+          <input type="text" name="name" placeholder="Your name" required/>
+          <input type="email" name="email" placeholder="Email" required/>
+        </div>
         <textarea name="message" placeholder="Tell us about your project…" rows="5" required></textarea>
         <button type="submit" class="btn primary">Send Message</button>
         <p id="formStatus" class="form-status" aria-live="polite"></p>
