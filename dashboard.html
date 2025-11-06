@@ -1,38 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Securafin Studios • Hybrid Pro Dashboard</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>Securafin Studios — Design. Code. Influence.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css"/>
-  <script defer src="dashboard.js"></script>
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+  <style>
+    @keyframes pulseGlow {
+      0% { transform: scale(1); opacity: 1; filter: drop-shadow(0 0 20px #00e5ff90); }
+      50% { transform: scale(1.08); opacity: 0.95; filter: drop-shadow(0 0 50px #00e5ffcc); }
+      100% { transform: scale(1); opacity: 1; filter: drop-shadow(0 0 20px #00e5ff90); }
+    }
+  </style>
 </head>
-<body class="dash-body">
+
+<body>
   <div class="noise"></div>
-  <header class="dash-nav">
-    <a href="index.html" class="brand dash-brand">
-      <img src="assets/logo.png" class="brand-logo" alt="logo"/>
+
+  <!-- NAV -->
+  <header class="nav">
+    <a class="brand" href="#">
+      <img src="/assets/logo.png" alt="Securafin Studios logo" class="brand-logo"/>
       <span class="brand-name">Securafin<span class="accent"> Studios</span></span>
     </a>
-    <nav class="dash-actions">
-      <button class="btn secondary small" id="themeToggle">Toggle Theme</button>
-      <button class="btn primary small" id="simulateBtn">Simulate Growth</button>
+    <nav class="nav-links">
+      <a href="#features">Expertise</a>
+      <a href="#industries">Industries</a>
+      <a href="#contact">Contact</a>
+      <a class="btn ghost" href="dashboard.html">Demo Dashboard</a>
     </nav>
   </header>
 
-  <main class="dash-main">
-    <section class="kpis">
-      <div class="kpi glow-blue"><div class="kpi-label">Monthly Revenue</div><div class="kpi-value" data-kpi="mrr">$42,800</div></div>
-      <div class="kpi glow-green"><div class="kpi-label">Active Users</div><div class="kpi-value" data-kpi="users">4,230</div></div>
-      <div class="kpi glow-gold"><div class="kpi-label">Conversion Rate</div><div class="kpi-value" data-kpi="conv">7.8%</div></div>
-      <div class="kpi glow-pink"><div class="kpi-label">Net Promoter Score</div><div class="kpi-value" data-kpi="nps">72</div></div>
-    </section>
-    <section class="panel chart-panel">
-      <h3 class="panel-title">Revenue & Growth Trends</h3>
-      <canvas id="revChart" width="900" height="400"></canvas>
-    </section>
-  </main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="hero-inner">
+      <img src="/assets/logo.png" alt="Securafin emblem" class="hero-logo" />
+      <h1 class="headline">Luxury <span class="accent">Tech Experiences</span><br/> Engineered to Influence.</h1>
+      <p class="subhead">Securafin Studios builds immersive, intelligent, and visually striking applications that help brands stand apart in fintech, legal, and creative industries.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="dashboard.html">See Live Demo</a>
+        <a class="btn secondary" href="#contact">Hire the Studio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section id="features" class="section">
+    <h2 class="section-title">Our Expertise</h2>
+    <div class="grid features-grid">
+      <div class="feature"><div class="feature-icon">⚙️</div><h3>Engineering</h3><p>Scalable architecture, API integrations, and modern development for peak performance.</p></div>
+      <div class="feature"><div class="feature-icon">🎨</div><h3>Design</h3><p>Premium aesthetics and intuitive experiences crafted for luxury and trust.</p></div>
+      <div class="feature"><div class="feature-icon">🤖</div><h3>Automation</h3><p>AI-enhanced solutions that transform your workflow and multiply results.</p></div>
+      <div class="feature"><div class="feature-icon">🚀</div><h3>Strategy</h3><p>We blend design, data, and technology to scale your vision with precision.</p></div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section id="industries" class="section">
+    <h2 class="section-title">Industries We Serve</h2>
+    <p class="lead">Custom apps tailored for every vision — business, ministry, creative, and beyond.</p>
+
+    <div class="grid cols-4">
+      <article class="card"><span class="badge">Business</span><div class="device" style="--bgimg:url('assets/industries/fintech.png')"></div><div class="content"><div class="title">Securafin AI</div><p class="desc">Financial automation dashboard & client portal.</p></div></article>
+      <article class="card"><span class="badge">Legal</span><div class="device" style="--bgimg:url('assets/industries/legal.png')"></div><div class="content"><div class="title">The Legal Suite</div><p class="desc">Case vault, e-sign docs & subscription legal access.</p></div></article>
+      <article class="card"><span class="badge">Ministry</span><div class="device" style="--bgimg:url('assets/industries/ministry.png')"></div><div class="content"><div class="title">FaithConnect</div><p class="desc">Donations, volunteer scheduling & sermon archive.</p></div></article>
+      <article class="card"><span class="badge">Creators</span><div class="device" style="--bgimg:url('assets/industries/creators.png')"></div><div class="content"><div class="title">Influence Hub</div><p class="desc">Courses, community & brand monetization.</p></div></article>
+      <article class="card"><span class="badge">Coaches</span><div class="device" style="--bgimg:url('assets/industries/coaches.png')"></div><div class="content"><div class="title">Vision Lab</div><p class="desc">Mentorship programs with booking & tracking.</p></div></article>
+      <article class="card"><span class="badge">Fintech</span><div class="device" style="--bgimg:url('assets/industries/credit.png')"></div><div class="content"><div class="title">Securafin Core</div><p class="desc">Credit builder & automated finance operations.</p></div></article>
+      <article class="card"><span class="badge">Education</span><div class="device" style="--bgimg:url('assets/industries/education.png')"></div><div class="content"><div class="title">LearnOS</div><p class="desc">Courses, attendance & parent portals.</p></div></article>
+      <article class="card"><span class="badge">Wellness</span><div class="device" style="--bgimg:url('assets/industries/wellness.png')"></div><div class="content"><div class="title">Thrive</div><p class="desc">Coaching, nutrition & habit streaks.</p></div></article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="contact-card">
+      <h2>Let’s Build Something Brilliant</h2>
+      <p>Have a vision? Let's turn it into a digital experience that defines excellence.</p>
+      <form id="contactForm" class="contact-form">
+        <div class="row"><input type="text" name="name" placeholder="Your name" required/><input type="email" name="email" placeholder="Email" required/></div>
+        <textarea name="message" placeholder="Tell us about your project…" rows="5" required></textarea>
+        <button type="submit" class="btn primary">Send Message</button>
+        <p id="formStatus" class="form-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Securafin Studios — Design. Code. Influence.</p>
+  </footer>
 </body>
 </html>
