@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Securafin Studios — Luxury Tech Development</title>
-  <meta name="description" content="Securafin Studios — Design. Code. Influence. A luxury app development studio crafting fintech, legal tech, and creator tech experiences."/>
+  <title>Securafin Studios — Design. Code. Influence.</title>
+  <meta name="description" content="Securafin Studios — Luxury tech development and app design for visionary brands."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-  <link rel="icon" href="assets/logo.svg" />
+  <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="styles.css"/>
   <script defer src="app.js"></script>
 </head>
@@ -18,7 +18,7 @@
   <!-- Navigation -->
   <header class="nav">
     <a class="brand" href="#">
-      <img src="assets/logo.svg" alt="Securafin Studios logo" class="brand-logo"/>
+      <img src="assets/logo.png" alt="Securafin Studios logo" class="brand-logo"/>
       <span class="brand-name">Securafin<span class="accent"> Studios</span></span>
     </a>
     <nav class="nav-links">
@@ -36,18 +36,18 @@
     <div class="hero-inner">
       <div class="hero-copy">
         <h1 class="headline">
-          Building <span class="accent">Luxury Tech</span><br/> for Visionary Brands.
+          Luxury <span class="accent">Tech Experiences</span><br/> Engineered to Influence.
         </h1>
         <p class="subhead">
-          We engineer, design, and deploy high-end digital experiences across fintech, legal, and creator industries.
+          Securafin Studios builds immersive, intelligent, and visually striking applications that help brands stand apart.
         </p>
         <div class="cta-row">
-          <a class="btn primary" href="#portfolio">Explore Work</a>
-          <a class="btn secondary" href="#contact">Hire Securafin Studios</a>
+          <a class="btn primary" href="dashboard.html">See Live Demo</a>
+          <a class="btn secondary" href="#contact">Hire the Studio</a>
         </div>
       </div>
       <div class="hero-visual">
-        <img src="assets/logo.svg" alt="Securafin Studios emblem" class="hero-logo" style="width:220px;filter:drop-shadow(0 0 20px #00e5ff66);"/>
+        <img src="assets/logo.png" alt="Securafin emblem" class="hero-logo" style="width:280px;filter:drop-shadow(0 0 20px #00e5ff88); animation: pulse 3s infinite;">
       </div>
     </div>
   </section>
@@ -59,22 +59,22 @@
       <div class="feature">
         <div class="feature-icon">⚙️</div>
         <h3>Engineering</h3>
-        <p>Scalable architecture, API integrations, and app development for enterprise-grade performance.</p>
+        <p>Scalable architecture, API integrations, and modern development for peak performance.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">🎨</div>
         <h3>Design</h3>
-        <p>Modern, luxury user interfaces that captivate audiences and convey trust and innovation.</p>
+        <p>Premium aesthetics and intuitive experiences crafted for luxury and trust.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">🤖</div>
         <h3>Automation</h3>
-        <p>AI-driven systems and automation workflows tailored to your business goals.</p>
+        <p>AI-enhanced solutions that transform your workflow and multiply results.</p>
       </div>
       <div class="feature">
-        <div class="feature-icon">🔐</div>
-        <h3>Security</h3>
-        <p>Fintech-level compliance and data security standards integrated from the ground up.</p>
+        <div class="feature-icon">🚀</div>
+        <h3>Strategy</h3>
+        <p>We blend design, data, and technology to scale your vision with precision.</p>
       </div>
     </div>
   </section>
@@ -83,20 +83,17 @@
   <section id="portfolio" class="section">
     <h2 class="section-title">Featured Projects</h2>
     <div class="grid work-grid">
-      <article class="work-card">
-        <div class="work-media gradient-a"></div>
+      <article class="work-card gradient-a">
         <h3>Securafin AI</h3>
-        <p>Fintech automation dashboard for intelligent finance management.</p>
+        <p>Fintech automation dashboard for data-driven decision making.</p>
       </article>
-      <article class="work-card">
-        <div class="work-media gradient-b"></div>
+      <article class="work-card gradient-b">
         <h3>The Legal Suite</h3>
-        <p>All-in-one legal service app with case tracking, document vault, and client portal.</p>
+        <p>End-to-end legal technology system for firms and clients.</p>
       </article>
-      <article class="work-card">
-        <div class="work-media gradient-c"></div>
+      <article class="work-card gradient-c">
         <h3>Influence University</h3>
-        <p>Personal brand and mentorship app for leadership, growth, and digital courses.</p>
+        <p>Personal brand and mentorship platform empowering creators and leaders.</p>
       </article>
     </div>
   </section>
@@ -105,7 +102,7 @@
   <section id="contact" class="section contact">
     <div class="contact-card">
       <h2>Let’s Build Something Brilliant</h2>
-      <p>We bring ideas to life through code, creativity, and strategy.</p>
+      <p>Have a vision? Let's turn it into a digital experience that defines excellence.</p>
       <form id="contactForm" class="contact-form">
         <div class="row">
           <input type="text" name="name" placeholder="Your name" required/>
@@ -121,5 +118,13 @@
   <footer class="footer">
     <p>© <span id="year"></span> Securafin Studios — Design. Code. Influence.</p>
   </footer>
+
+  <style>
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.85; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
 </body>
 </html>
