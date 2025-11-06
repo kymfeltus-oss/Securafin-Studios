@@ -11,7 +11,9 @@
   <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="styles.css"/>
   <script defer src="app.js"></script>
+
   <style>
+    /* hero logo pulse */
     @keyframes pulseGlow {
       0% { transform: scale(1); opacity: 1; filter: drop-shadow(0 0 20px #00e5ff90); }
       50% { transform: scale(1.08); opacity: 0.95; filter: drop-shadow(0 0 50px #00e5ffcc); }
@@ -23,7 +25,7 @@
 <body>
   <div class="noise"></div>
 
-  <!-- Navigation -->
+  <!-- Nav -->
   <header class="nav">
     <a class="brand" href="#">
       <img src="/assets/logo.png" alt="Securafin Studios logo" class="brand-logo"/>
@@ -31,7 +33,6 @@
     </a>
     <nav class="nav-links">
       <a href="#features">Expertise</a>
-      <a href="#portfolio">Portfolio</a>
       <a href="#industries">Industries</a>
       <a href="#contact">Contact</a>
       <a class="btn ghost" href="dashboard.html">Demo Dashboard</a>
@@ -44,7 +45,7 @@
     <div class="glow glow-2"></div>
     <div class="hero-inner" style="display:flex; flex-direction:column; align-items:center; justify-content:center;">
       <img src="/assets/logo.png" alt="Securafin emblem" class="hero-logo" 
-      style="width:540px; max-width:90%; margin-bottom:40px; filter:drop-shadow(0 0 35px #00e5ffcc) brightness(1.3); animation:pulseGlow 5s infinite ease-in-out;">
+           style="width:540px; max-width:90%; margin-bottom:40px; filter:drop-shadow(0 0 35px #00e5ffcc) brightness(1.3); animation:pulseGlow 5s infinite ease-in-out;">
       <h1 class="headline" style="font-size:clamp(36px, 5vw, 64px); line-height:1.1; margin:0; text-align:center;">
         Luxury <span class="accent">Tech Experiences</span><br/> Engineered to Influence.
       </h1>
@@ -59,7 +60,7 @@
     </div>
   </section>
 
-  <!-- Features -->
+  <!-- Expertise -->
   <section id="features" class="section">
     <h2 class="section-title">Our Expertise</h2>
     <div class="grid features-grid">
@@ -70,30 +71,155 @@
     </div>
   </section>
 
-  <!-- Portfolio -->
-  <section id="portfolio" class="section">
-    <h2 class="section-title">Featured Projects</h2>
-    <div class="grid work-grid">
-      <article class="work-card gradient-a"><h3>Securafin AI</h3><p>Fintech automation dashboard for data-driven decision making.</p></article>
-      <article class="work-card gradient-b"><h3>The Legal Suite</h3><p>End-to-end legal technology system for firms and clients.</p></article>
-      <article class="work-card gradient-c"><h3>Influence University</h3><p>Personal brand and mentorship platform empowering creators and leaders.</p></article>
-    </div>
-  </section>
-
-  <!-- Industries We Serve -->
+  <!-- Industries (moved up, replaces old projects) -->
   <section id="industries" class="section">
     <h2 class="section-title">Industries We Serve</h2>
     <p class="lead">Custom apps tailored for every vision — business, ministry, creative, and beyond.</p>
 
     <div class="grid cols-4">
-      <article class="card"><span class="badge">Business</span><div class="device"><div class="screen"></div></div><div class="content"><div class="title">Securafin AI</div><p class="desc">Financial automation dashboard & client portal.</p><div class="button-row"><a class="btn primary small" href="#">View Demo</a><a class="btn ghost small" href="#">Case Study</a></div></div></article>
-      <article class="card"><span class="badge">Legal</span><div class="device"><div class="screen" style="background:linear-gradient(135deg,#0ea5e9,#06b6d4);opacity:.25"></div></div><div class="content"><div class="title">The Legal Suite</div><p class="desc">Case vault, e-sign docs & subscription legal access.</p><div class="button-row"><a class="btn primary small" href="#">View Demo</a><a class="btn ghost small" href="#">Case Study</a></div></div></article>
-      <article class="card"><span class="badge">Ministry</span><div class="device"><div class="screen" style="background:linear-gradient(135deg,#22d3ee,#a78bfa);opacity:.25"></div></div><div class="content"><div class="title">FaithConnect</div><p class="desc">Donations, volunteer scheduling & sermon archive.</p><div class="button-row"><a class="btn primary small" href="#">View Demo</a><a class="btn ghost small" href="#">Case Study</a></div></div></article>
-      <article class="card"><span class="badge">Creators</span><div class="device"><div class="screen" style="background:linear-gradient(135deg,#22c55e,#0ea5e9);opacity:.25"></div></div><div class="content"><div class="title">Influence Hub</div><p class="desc">Courses, community & brand monetization.</p><div class="button-row"><a class="btn primary small" href="#">View Demo</a><a class="btn ghost small" href="#">Case Study</a></div></div></article>
-      <article class="card"><span class="badge">Coaches</span><div class="device"><div class="screen" style="background:linear-gradient(135deg,#f59e0b,#06b6d4);opacity:.25"></div></div><div class="content"><div class="title">Vision Lab</div><p class="desc">Mentorship programs with booking & tracking.</p><div class="button-row"><a class="btn primary small" href="#">View Demo</a><a class="btn ghost small" href="#">Case Study</a></div></div></article>
-      <article class="card"><span class="badge">Fintech</span><div class="device"><div class="screen" style="background:linear-gradient(135deg,#00e5ff,#6be6ff);opacity:.25"></div></div><div class="content"><div class="title">Securafin Core</div><p class="desc">Credit builder & automated finance operations.</p><div class="button-row"><a class="btn primary small" href="#">View Demo</a><a class="btn ghost small" href="#">Case Study</a></div></div></article>
-      <article class="card"><span class="badge">Wellness</span><div class="device"><div class="screen" style="background:linear-gradient(135deg,#8b5cf6,#06b6d4);opacity:.25"></div></div><div class="content"><div class="title">Thrive</div><p class="desc">Coaching, nutrition & habit streaks.</p><div class="button-row"><a class="btn primary small" href="#">View Demo</a><a class="btn ghost small" href="#">Case Study</a></div></div></article>
-      <article class="card"><span class="badge">Education</span><div class="device"><div class="screen" style="background:linear-gradient(135deg,#0ea5e9,#22d3ee);opacity:.25"></div></div><div class="content"><div class="title">LearnOS</div><p class="desc">Courses, attendance & parent portals.</p><div class="button-row"><a class="btn primary small" href="#">View Demo</a><a class="btn ghost small" href="#">Case Study</a></div></div></article>
+      <!-- Business -->
+      <article class="card">
+        <span class="badge">Business</span>
+        <div
+          class="device"
+          style="--bgimg: url('https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1400&auto=format&fit=crop');"
+          aria-label="Business analytics dashboard preview"
+        ></div>
+        <div class="content">
+          <div class="title">Securafin AI</div>
+          <p class="desc">Financial automation dashboard & client portal.</p>
+          <div class="button-row">
+            <a class="btn primary small" href="#">View Demo</a>
+            <a class="btn ghost small" href="#">Case Study</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Legal -->
+      <article class="card">
+        <span class="badge">Legal</span>
+        <div
+          class="device"
+          style="--bgimg: url('https://images.unsplash.com/photo-1588702547919-26089e690ecc?q=80&w=1400&auto=format&fit=crop');"
+          aria-label="Legal case management screen"
+        ></div>
+        <div class="content">
+          <div class="title">The Legal Suite</div>
+          <p class="desc">Case vault, e-sign docs & subscription legal access.</p>
+          <div class="button-row">
+            <a class="btn primary small" href="#">View Demo</a>
+            <a class="btn ghost small" href="#">Case Study</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Ministry -->
+      <article class="card">
+        <span class="badge">Ministry</span>
+        <div
+          class="device"
+          style="--bgimg: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1400&auto=format&fit=crop');"
+          aria-label="Donation and livestream app"
+        ></div>
+        <div class="content">
+          <div class="title">FaithConnect</div>
+          <p class="desc">Donations, volunteer scheduling & sermon archive.</p>
+          <div class="button-row">
+            <a class="btn primary small" href="#">View Demo</a>
+            <a class="btn ghost small" href="#">Case Study</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Creators -->
+      <article class="card">
+        <span class="badge">Creators</span>
+        <div
+          class="device"
+          style="--bgimg: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1400&auto=format&fit=crop');"
+          aria-label="Course and membership platform"
+        ></div>
+        <div class="content">
+          <div class="title">Influence Hub</div>
+          <p class="desc">Courses, community & brand monetization.</p>
+          <div class="button-row">
+            <a class="btn primary small" href="#">View Demo</a>
+            <a class="btn ghost small" href="#">Case Study</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Coaches -->
+      <article class="card">
+        <span class="badge">Coaches</span>
+        <div
+          class="device"
+          style="--bgimg: url('https://images.unsplash.com/photo-1518081461904-9ac4b62a822e?q=80&w=1400&auto=format&fit=crop');"
+          aria-label="Calendar & goal tracker app"
+        ></div>
+        <div class="content">
+          <div class="title">Vision Lab</div>
+          <p class="desc">Mentorship programs with booking & tracking.</p>
+          <div class="button-row">
+            <a class="btn primary small" href="#">View Demo</a>
+            <a class="btn ghost small" href="#">Case Study</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Fintech -->
+      <article class="card">
+        <span class="badge">Fintech</span>
+        <div
+          class="device"
+          style="--bgimg: url('https://images.unsplash.com/photo-1559526324-593bc073d938?q=80&w=1400&auto=format&fit=crop');"
+          aria-label="Finance charts & payments UI"
+        ></div>
+        <div class="content">
+          <div class="title">Securafin Core</div>
+          <p class="desc">Credit builder & automated finance operations.</p>
+          <div class="button-row">
+            <a class="btn primary small" href="#">View Demo</a>
+            <a class="btn ghost small" href="#">Case Study</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Wellness -->
+      <article class="card">
+        <span class="badge">Wellness</span>
+        <div
+          class="device"
+          style="--bgimg: url('https://images.unsplash.com/photo-1554284126-aa88f22d8b74?q=80&w=1400&auto=format&fit=crop');"
+          aria-label="Fitness tracker app"
+        ></div>
+        <div class="content">
+          <div class="title">Thrive</div>
+          <p class="desc">Coaching, nutrition & habit streaks.</p>
+          <div class="button-row">
+            <a class="btn primary small" href="#">View Demo</a>
+            <a class="btn ghost small" href="#">Case Study</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Education -->
+      <article class="card">
+        <span class="badge">Education</span>
+        <div
+          class="device"
+          style="--bgimg: url('https://images.unsplash.com/photo-1554774853-719586f82d77?q=80&w=1400&auto=format&fit=crop');"
+          aria-label="Online learning dashboard"
+        ></div>
+        <div class="content">
+          <div class="title">LearnOS</div>
+          <p class="desc">Courses, attendance & parent portals.</p>
+          <div class="button-row">
+            <a class="btn primary small" href="#">View Demo</a>
+            <a class="btn ghost small" href="#">Case Study</a>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
