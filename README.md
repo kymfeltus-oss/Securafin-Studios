@@ -1,15 +1,10 @@
-# Securafin Studios — Luxury Tech Developer Portfolio
-The official portfolio demo for **Securafin Studios**, showcasing expertise across fintech, legal, and creative technology.
+# Securafin Studios — Hybrid Pro Theme
+A luxury-tech portfolio and interactive dashboard demo built for Securafin Studios.
 
-## 🚀 Deploy to Netlify
-- Drag & drop this folder into Netlify to deploy instantly, or
-- Push to GitHub and connect via **Import from Git**.
+### 🚀 Deploy
+Upload this folder to GitHub → Connect to Netlify → Deploy instantly (no build step).
 
-## 💎 Highlights
-- Premium UI and responsive design
-- Animated hero and custom logo
-- Contact form mock (extendable to Firebase or Airtable)
-- Dashboard demo page with simulated analytics
-
----
-© 2025 Securafin Studios — Design. Code. Influence.
+### 🧠 Features
+- Neon glowing hero logo
+- Hybrid Pro interactive dashboard with live chart + KPI simulation
+- Toggle dark/light themes
