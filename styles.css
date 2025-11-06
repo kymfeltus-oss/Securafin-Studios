@@ -1,3 +1,270 @@
+:root {
+  --bg: #0b0f14;
+  --card: #121924;
+  --text: #e6f1ff;
+  --muted: #c5d2e3;
+  --accent: #00e5ff;
+  --accent-2: #6be6ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ==== Background Texture ==== */
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="1.2"/></filter><rect width="100%" height="100%" filter="url(%23n)"/></svg>');
+  mix-blend-mode: soft-light;
+}
+
+/* ==== NAVBAR ==== */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(to bottom, rgba(11,15,20,.9), rgba(11,15,20,.6));
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.brand-logo {
+  width: 60px;
+  height: auto;
+}
+
+.brand-name {
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 16px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* ==== BUTTONS ==== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.08);
+  font-weight: 700;
+  text-decoration: none;
+  transition: all .25s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #001018;
+}
+
+.btn.secondary {
+  background: #17202b;
+  color: var(--text);
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--text);
+}
+
+.btn.small {
+  font-size: 12px;
+  padding: 8px 12px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 229, 255, 0.25);
+}
+
+/* ==== HERO SECTION ==== */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 100px 24px 80px;
+}
+
+.hero-logo {
+  width: 540px;
+  max-width: 90%;
+  margin-bottom: 40px;
+  animation: pulseGlow 5s infinite ease-in-out;
+  filter: drop-shadow(0 0 35px #00e5ffcc) brightness(1.3);
+}
+
+.headline {
+  font-size: clamp(36px, 5vw, 64px);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.subhead {
+  color: #c5d2e3;
+  max-width: 700px;
+  margin: 20px auto 30px;
+  font-size: 18px;
+}
+
+.cta-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ==== FLOATING GLOW ORBS ==== */
+.glow {
+  position: absolute;
+  filter: blur(90px);
+  border-radius: 50%;
+  opacity: .6;
+}
+
+.glow-1 {
+  width: 420px;
+  height: 420px;
+  background: #00e5ff3d;
+  top: -120px;
+  left: -80px;
+  animation: float 14s ease-in-out infinite;
+}
+
+.glow-2 {
+  width: 520px;
+  height: 520px;
+  background: #6be6ff33;
+  bottom: -180px;
+  right: -100px;
+  animation: float 16s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  50% { transform: translateY(-18px); opacity: .8; }
+}
+
+/* ==== SECTION GENERIC ==== */
+.section {
+  padding: 60px 24px;
+}
+
+.section-title {
+  max-width: 1200px;
+  margin: 0 auto 24px;
+  font-size: clamp(24px, 2.6vw, 40px);
+}
+
+/* ==== FEATURES SECTION ==== */
+.grid {
+  display: grid;
+  gap: 18px;
+}
+
+.features-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.feature {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 18px;
+  padding: 22px;
+  text-align: center;
+}
+
+.feature-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+/* ==== INDUSTRIES SECTION ==== */
+p.lead {
+  color: var(--muted);
+  max-width: 800px;
+  margin: 0 auto 24px;
+  text-align: center;
+}
+
+.cols-4 {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+@media(min-width:1000px) {
+  .cols-4 { grid-template-columns: repeat(4, 1fr); }
+}
+@media(min-width:640px) and (max-width:999px) {
+  .cols-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media(max-width:639px) {
+  .cols-4 { grid-template-columns: 1fr; }
+}
+
+/* ==== INDUSTRY CARDS ==== */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,.06);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 50px rgba(0,229,255,.18);
+  border-color: rgba(0,229,255,.25);
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #001018;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  box-shadow: 0 8px 30px rgba(0,229,255,.3);
+}
+
+/* ==== DEVICE / DASHBOARD PREVIEW ==== */
 .device {
   position: relative;
   margin: 12px;
@@ -11,6 +278,7 @@
   background-position: center;
   transition: transform .3s ease, filter .3s ease;
 }
+
 .device::before {
   content: "";
   position: absolute;
@@ -19,10 +287,45 @@
   filter: blur(44px);
   animation: spin 18s linear infinite;
 }
+
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* subtle hover zoom + glow intensity */
+/* Hover effect */
 .card:hover .device {
   transform: scale(1.04);
-  filter: brightness(1.1);
+  filter: brightness(1.08);
+}
+
+/* ==== CARD CONTENT ==== */
+.content {
+  padding: 16px;
+}
+
+.title {
+  font-weight: 800;
+  margin: 6px 0 4px;
+}
+
+.desc {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ==== FOOTER ==== */
+.footer {
+  padding: 36px 24px;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid rgba(255,255,255,.06);
+  background: #0a1018;
+}
+
+/* ==== RESPONSIVE TWEAKS ==== */
+@media(max-width:420px) {
+  .brand-logo { width: 52px; }
+  .device { height: 150px; }
+  .title { font-size: 16px; }
+  .desc { font-size: 13px; }
+  .btn.small { font-size: 12px; padding: 7px 10px; }
 }
