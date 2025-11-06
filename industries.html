@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industries We Serve — Securafin Studios</title>
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+  <!-- Sidebar Menu -->
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" id="closeBtn">&times;</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="industries.html" class="active">Industries</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="#contact">Contact</a>
+      <a href="dashboard.html">Demo Dashboard</a>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content" id="mainContent">
+    <header>
+      <img src="assets/logo.png" alt="Securafin Studios logo" class="logo" />
+      <div class="menu-icon" id="menuBtn">&#9776;</div>
+    </header>
+
+    <section class="section industries-hero">
+      <h1 class="section-title">Industries We Serve</h1>
+      <p class="lead">Custom apps tailored for every vision — business, ministry, creative, and beyond.</p>
+    </section>
+
+    <section class="section industries-grid">
+      <div class="grid cols-4">
+
+        <!-- 1. Business -->
+        <article class="card">
+          <span class="badge">Business</span>
+          <div class="device" style="--bgimg:url('assets/industries/fintech.png');"></div>
+          <div class="content">
+            <div class="title">Securafin AI</div>
+            <p class="desc">Financial automation dashboard & client portal.</p>
+          </div>
+        </article>
+
+        <!-- 2. Legal -->
+        <article class="card">
+          <span class="badge">Legal</span>
+          <div class="device" style="--bgimg:url('assets/industries/legal.png'); background-position:left center;"></div>
+          <div class="content">
+            <div class="title">The Legal Suite</div>
+            <p class="desc">Case vault, e-sign docs & subscription legal access.</p>
+          </div>
+        </article>
+
+        <!-- 3. Ministry -->
+        <article class="card">
+          <span class="badge">Ministry</span>
+          <div class="device" style="--bgimg:url('assets/industries/ministry.png');"></div>
+          <div class="content">
+            <div class="title">FaithConnect</div>
+            <p class="desc">Donations, volunteer scheduling & sermon archive.</p>
+          </div>
+        </article>
+
+        <!-- 4. Creators -->
+        <article class="card">
+          <span class="badge">Creators</span>
+          <div class="device" style="--bgimg:url('assets/industries/creators.png');"></div>
+          <div class="content">
+            <div class="title">Influence Hub</div>
+            <p class="desc">Courses, community & brand monetization.</p>
+          </div>
+        </article>
+
+        <!-- 5. Coaches -->
+        <article class="card">
+          <span class="badge">Coaches</span>
+          <div class="device"
+               style="--bgimg:url('assets/industries/coaches.png');
+                      background-position:15% center;
+                      background-color:#0b0f14;
+                      background-blend-mode:normal;">
+          </div>
+          <div class="content">
+            <div class="title">Vision Lab</div>
+            <p class="desc">Mentorship programs with booking & tracking.</p>
+          </div>
+        </article>
+
+        <!-- 6. Fintech -->
+        <article class="card">
+          <span class="badge">Fintech</span>
+          <div class="device" style="--bgimg:url('assets/industries/credit.png');"></div>
+          <div class="content">
+            <div class="title">Securafin Core</div>
+            <p class="desc">Credit builder & automated finance operations.</p>
+          </div>
+        </article>
+
+        <!-- 7. Education -->
+        <article class="card">
+          <span class="badge">Education</span>
+          <div class="device" style="--bgimg:url('assets/industries/education.png');"></div>
+          <div class="content">
+            <div class="title">LearnOS</div>
+            <p class="desc">Courses, attendance & parent portals.</p>
+          </div>
+        </article>
+
+        <!-- 8. Wellness -->
+        <article class="card">
+          <span class="badge">Wellness</span>
+          <div class="device" style="--bgimg:url('assets/industries/wellness.png');"></div>
+          <div class="content">
+            <div class="title">Thrive</div>
+            <p class="desc">Coaching, nutrition & habit streaks.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Securafin Studios — Design. Code. Influence.</p>
+    </footer>
+  </div>
+</body>
+</html>
